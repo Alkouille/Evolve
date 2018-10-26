@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 31.9148, 29.0188 )
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
 
@@ -27,7 +27,7 @@ texture = ExtResource( 2 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 0.1, 0.1 )
+zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
