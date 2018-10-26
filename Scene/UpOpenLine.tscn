@@ -14,7 +14,7 @@ custom_solver_bias = 0.0
 a = Vector2( 0.121613, 518.296 )
 b = Vector2( 0, 10 )
 
-[node name="DownOpenLine" type="StaticBody2D" index="0"]
+[node name="DownOpenLine" type="StaticBody2D"]
 
 position = Vector2( 1.26866, 3.11399 )
 input_pickable = false
@@ -44,7 +44,7 @@ shape = SubResource( 1 )
 
 [node name="UpEdge" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( 17.4972, 31.2218 )
+position = Vector2( 17.4972, 33.0325 )
 rotation = 1.5708
 scale = Vector2( -0.0719963, -0.0157136 )
 shape = SubResource( 2 )

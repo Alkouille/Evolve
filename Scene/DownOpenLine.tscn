@@ -5,18 +5,19 @@
 [sub_resource type="SegmentShape2D" id=1]
 
 custom_solver_bias = 0.0
-a = Vector2( -0.507507, -4.72534 )
+a = Vector2( -0.565369, -7.72536 )
 b = Vector2( -0.507507, 38.9079 )
 
 [sub_resource type="SegmentShape2D" id=2]
 
 custom_solver_bias = 0.0
-a = Vector2( 0.121613, 518.296 )
-b = Vector2( 0, 10 )
+a = Vector2( 1.16443, 521.035 )
+b = Vector2( 1.56769, 8.77258 )
 
-[node name="DownOpenLine" type="StaticBody2D" index="0"]
+[node name="DownOpenLine" type="StaticBody2D"]
 
-position = Vector2( 1.26866, 3.11399 )
+position = Vector2( 1.86696, 3.42649 )
+scale = Vector2( 1.01779, 1.00886 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -27,27 +28,40 @@ bounce = 0.0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 21.6658, 32.1213 )
+position = Vector2( 13.0921, 27.6516 )
+scale = Vector2( 3.1645, 5.51503 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="LeftEdge" type="CollisionShape2D" parent="." index="1"]
+[node name="RightEdge" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 17.7236, 31.3423 )
-scale = Vector2( 0.0371738, 0.0462791 )
+position = Vector2( 25.55, 23.9629 )
+scale = Vector2( 0.187509, 0.236222 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="RightEdge" type="CollisionShape2D" parent="." index="2"]
+[node name="LeftEdge" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( 25.6343, 31.3423 )
-scale = Vector2( 0.0371738, 0.0462791 )
+position = Vector2( 0.805332, 23.9338 )
+scale = Vector2( 0.187509, 0.236222 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="UpEdge" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( 17.4972, 31.2218 )
+position = Vector2( 0.0233588, 22.3055 )
 rotation = 1.5708
-scale = Vector2( -0.0719963, -0.0157136 )
+scale = Vector2( -0.0719963, -0.0491413 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 
