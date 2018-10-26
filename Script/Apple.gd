@@ -1,9 +1,6 @@
 extends StaticBody2D
 
-onready var players = get_tree().get_nodes_in_group("hero")
-onready var  player = players[0] # To get a Ref to the player
-
-
+var textCount = 0
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -16,9 +13,19 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
+	textCount = 0
 	if body.is_in_group("player"):
 		if body.actualGameplay.size() >= 4:
-			player.actualGameplay += "Apple"
+			body.actualGameplay += "Apple"
 			queue_free()
 		else:
-			pass
+			$Text.set_text("Hi,  i'm Cherry the Apple ! ")
+			$Text
+			$Timer.start()
+
+
+    
+
+func _on_Timer_timeout():
+	if textCount == 0:
+		$Text.set_text("Hi ?")

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var actualGameplay = ["moveright"]
+var actualGameplay = ["moveright", "moveleft"]
 var finalGamePlay = ["moveright", "moveLeft", "moveUpAndDown", "Talk"]
 
 func _ready():
