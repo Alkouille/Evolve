@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Map.gd" type="Script" id=1]
 [ext_resource path="res://Scene/TileMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Apple.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://font/LemonMilk.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://fx/light.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Apple.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://font/LemonMilk.otf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 15
 use_mipmaps = true
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Font/fallback", "Resource", "Settings" ]
 
 [node name="Map" type="Node2D" index="0"]
@@ -21,25 +22,51 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
 
-tile_data = PoolIntArray( 65535, 2, 0, 0, 3, 0, 1, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0 )
+tile_data = PoolIntArray( 65536, 1, 0, 65537, 1, 0, 65538, 1, 0 )
 
-[node name="Apple" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Light2D" type="Light2D" parent="." index="1"]
+
+position = Vector2( -211.057, -57.6796 )
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 3.0
+color = Color( 1, 1, 1, 1 )
+energy = 2.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Apple" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -105.322, 55.6829 )
 scale = Vector2( 0.652145, 0.595453 )
 
-[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 72.7055, 62.7778 )
+position = Vector2( 93.1087, 99.0396 )
+scale = Vector2( 0.434338, 0.476417 )
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="Timer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 4.0
 one_shot = false
 autostart = false
 
-[node name="Intro" type="RichTextLabel" parent="." index="4"]
+[node name="Intro" type="RichTextLabel" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
