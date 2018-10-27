@@ -16,11 +16,10 @@ func _on_Area2D_body_entered(body):
 	textCount = 0
 	if body.is_in_group("player"):
 		if body.actualGameplay.size() >= 4:
-			body.actualGameplay += "Apple"
+			body.actualGameplay.push_back("Talk")
 			queue_free()
 		else:
 			$Text.set_text("Hi,  i'm Cherry the Apple ! ")
-			$Text
 			$Timer.start()
 			$Timer.set_wait_time(1)
 
