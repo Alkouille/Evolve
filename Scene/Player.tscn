@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
-[ext_resource path="res://Graphisme/Player.png" type="Texture" id=2]
+[ext_resource path="res://Graphisme/Player2.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -55,7 +55,7 @@ _sections_unfolded = [ "Editor", "Limit", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( -1.00549, 0.164634 )
+position = Vector2( -1.32902, -0.158897 )
 scale = Vector2( 0.820802, 0.960575 )
 shape = SubResource( 1 )
 

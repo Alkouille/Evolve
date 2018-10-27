@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Apple.gd" type="Script" id=1]
-[ext_resource path="res://Graphisme/Apple.png" type="Texture" id=2]
+[ext_resource path="res://Graphisme/Apple 2.png" type="Texture" id=2]
 [ext_resource path="res://font/LemonMilk.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -56,7 +56,7 @@ audio_bus_name = "Master"
 
 [node name="AreaShape" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 33.967, -41.9041 )
+position = Vector2( 35.3438, -30.503 )
 scale = Vector2( -0.378254, 5.09226 )
 shape = SubResource( 1 )
 
@@ -100,7 +100,7 @@ autostart = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 
-position = Vector2( 0.362926, -2.67898 )
+position = Vector2( 6.76563, 3.46489 )
 scale = Vector2( 1, 1.11224 )
 shape = SubResource( 3 )
 
