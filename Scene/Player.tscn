@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Script/Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Graphisme/Player.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 31.9148, 29.0188 )
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
 
@@ -17,17 +17,22 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Visibility", "collision" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+position = Vector2( -0.846465, -1.20568 )
+scale = Vector2( 4.15696, 3.8919 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 
+position = Vector2( 3.09175, 0.951307 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 0.5, 0.5 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -50,6 +55,8 @@ _sections_unfolded = [ "Editor", "Limit", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-shape = SubResource( 2 )
+position = Vector2( -1.00549, 0.164634 )
+scale = Vector2( 0.820802, 0.960575 )
+shape = SubResource( 1 )
 
 
