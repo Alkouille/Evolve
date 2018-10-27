@@ -10,13 +10,13 @@ b = Vector2( 0, 10 )
 
 [node name="Node" type="Node"]
 
-[node name="UpOpenLine2" type="Sprite" parent="." index="0"]
+[node name="UpOpenLine" type="Sprite" parent="." index="0"]
 
 position = Vector2( 495, 305 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
 
-[node name="UpOpenLine" type="StaticBody2D" parent="UpOpenLine2" index="0"]
+[node name="UpOpenLine" type="StaticBody2D" parent="UpOpenLine" index="0"]
 
 position = Vector2( 1.53903, -0.569489 )
 scale = Vector2( 1.0481, 1.0178 )
@@ -28,13 +28,19 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="1EdgeLeft" type="CollisionShape2D" parent="UpOpenLine2/UpOpenLine" index="0"]
+[node name="1EdgeLeft" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="0"]
 
 position = Vector2( -30.439, -32 )
 scale = Vector2( 1, 7.27273 )
 shape = SubResource( 1 )
 
-[node name="1EdgeDown" type="CollisionShape2D" parent="UpOpenLine2/UpOpenLine" index="1"]
+[node name="1EdgeRight" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="1"]
+
+position = Vector2( 28.878, -34.9091 )
+scale = Vector2( 1, 7.27273 )
+shape = SubResource( 1 )
+
+[node name="1EdgeDown2" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="2"]
 
 position = Vector2( 27.5173, 30.1356 )
 rotation = 1.5708
@@ -42,19 +48,47 @@ scale = Vector2( 1.6279, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="1EdgeRight" type="CollisionShape2D" parent="UpOpenLine2/UpOpenLine" index="2"]
-
-position = Vector2( 28.878, -34.9091 )
-scale = Vector2( 1, 7.27273 )
-shape = SubResource( 1 )
-
-[node name="DownOpenLine2" type="Sprite" parent="." index="1"]
+[node name="LeftAndRightOpen" type="Sprite" parent="." index="1"]
 
 position = Vector2( 495, 305 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
 
-[node name="DownOpenLine" type="StaticBody2D" parent="DownOpenLine2" index="0"]
+[node name="LeOpenLine" type="StaticBody2D" parent="LeftAndRightOpen" index="0"]
+
+position = Vector2( 1.53903, -0.569489 )
+scale = Vector2( 1.0481, 1.0178 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="1EdgeDown" type="CollisionShape2D" parent="LeftAndRightOpen/LeOpenLine" index="0"]
+
+position = Vector2( 27.5173, 30.1356 )
+rotation = 1.5708
+scale = Vector2( 1.6279, 5.67311 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="3EdgeUp2" type="CollisionShape2D" parent="LeftAndRightOpen/LeOpenLine" index="1"]
+
+position = Vector2( 28.387, -26.7183 )
+rotation = 1.5708
+scale = Vector2( 3.87988, 5.83035 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="DownOpenLine" type="Sprite" parent="." index="2"]
+
+position = Vector2( 495, 305 )
+scale = Vector2( 16.4062, 9.21875 )
+texture = ExtResource( 1 )
+
+[node name="DownOpenLine" type="StaticBody2D" parent="DownOpenLine" index="0"]
 
 position = Vector2( 0.883795, -0.596588 )
 scale = Vector2( 1.04857, 0.984746 )
@@ -66,13 +100,13 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="2EdgeLeft" type="CollisionShape2D" parent="DownOpenLine2/DownOpenLine" index="0"]
+[node name="2EdgeLeft" type="CollisionShape2D" parent="DownOpenLine/DownOpenLine" index="0"]
 
 position = Vector2( -30.439, -32 )
 scale = Vector2( 1, 7.27273 )
 shape = SubResource( 1 )
 
-[node name="2EdgeUp" type="CollisionShape2D" parent="DownOpenLine2/DownOpenLine" index="1"]
+[node name="2EdgeUp" type="CollisionShape2D" parent="DownOpenLine/DownOpenLine" index="1"]
 
 position = Vector2( 27.3809, -27.6621 )
 rotation = 1.5708
@@ -80,19 +114,19 @@ scale = Vector2( 3.94224, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="2EdgeRight" type="CollisionShape2D" parent="DownOpenLine2/DownOpenLine" index="2"]
+[node name="2EdgeRight" type="CollisionShape2D" parent="DownOpenLine/DownOpenLine" index="2"]
 
 position = Vector2( 28.878, -34.9091 )
 scale = Vector2( 1, 7.27273 )
 shape = SubResource( 1 )
 
-[node name="RightOpenLine2" type="Sprite" parent="." index="2"]
+[node name="RightOpenLine" type="Sprite" parent="." index="3"]
 
 position = Vector2( 495, 305 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
 
-[node name="RightOpenLine" type="StaticBody2D" parent="RightOpenLine2" index="0"]
+[node name="RightOpenLine" type="StaticBody2D" parent="RightOpenLine" index="0"]
 
 position = Vector2( 1.79808, -0.0542336 )
 scale = Vector2( 1.07715, 1.0017 )
@@ -104,13 +138,13 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="3EdgeLeft" type="CollisionShape2D" parent="RightOpenLine2/RightOpenLine" index="0"]
+[node name="3EdgeLeft" type="CollisionShape2D" parent="RightOpenLine/RightOpenLine" index="0"]
 
 position = Vector2( -30.439, -32 )
 scale = Vector2( 1, 7.27273 )
 shape = SubResource( 1 )
 
-[node name="3EdgeDown" type="CollisionShape2D" parent="RightOpenLine2/RightOpenLine" index="1"]
+[node name="3EdgeDown" type="CollisionShape2D" parent="RightOpenLine/RightOpenLine" index="1"]
 
 position = Vector2( 27.5173, 30.1356 )
 rotation = 1.5708
@@ -118,7 +152,7 @@ scale = Vector2( 1.6279, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="3EdgeUp" type="CollisionShape2D" parent="RightOpenLine2/RightOpenLine" index="2"]
+[node name="3EdgeUp" type="CollisionShape2D" parent="RightOpenLine/RightOpenLine" index="2"]
 
 position = Vector2( 27.3809, -27.6621 )
 rotation = 1.5708
@@ -126,13 +160,13 @@ scale = Vector2( 3.94224, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="LeftOpenLine" type="Sprite" parent="." index="3"]
+[node name="LeftOpenLine" type="Sprite" parent="." index="4"]
 
 position = Vector2( 1690, 280 )
 scale = Vector2( 16.4063, 9.21875 )
 texture = ExtResource( 1 )
 
-[node name="LeftOpenLine2" type="StaticBody2D" parent="LeftOpenLine" index="0"]
+[node name="LeftOpenLine" type="StaticBody2D" parent="LeftOpenLine" index="0"]
 
 position = Vector2( -0.609512, -1.08475 )
 scale = Vector2( 1.06762, 1.00169 )
@@ -144,7 +178,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="4EdgeDown" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine2" index="0"]
+[node name="4EdgeDown" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine" index="0"]
 
 position = Vector2( 27.5173, 30.1356 )
 rotation = 1.5708
@@ -152,7 +186,7 @@ scale = Vector2( 1.6279, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="4EdgeUp" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine2" index="1"]
+[node name="4EdgeUp" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine" index="1"]
 
 position = Vector2( 27.3809, -28.1035 )
 rotation = 1.5708
@@ -160,7 +194,7 @@ scale = Vector2( 3.94224, 5.67311 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="4EdgeRight" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine2" index="2"]
+[node name="4EdgeRight" type="CollisionShape2D" parent="LeftOpenLine/LeftOpenLine" index="2"]
 
 position = Vector2( 28.878, -31.2013 )
 scale = Vector2( 1, 6.56514 )

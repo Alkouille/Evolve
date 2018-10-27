@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://temp/tileset.res" type="TileSet" id=1]
+[ext_resource path="res://temp/tileset2.res" type="TileSet" id=1]
 
 [node name="TileMap" type="TileMap"]
 
