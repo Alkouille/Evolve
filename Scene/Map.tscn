@@ -28,7 +28,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="TileMap" parent="." index="0" instance=ExtResource( 2 )]
 
-tile_data = PoolIntArray( 65536, 3, 0, 65537, 3, 0 )
+tile_data = PoolIntArray( 65537, 3, 0, 65538, 3, 0 )
 
 [node name="Light2D" type="Light2D" parent="." index="1"]
 
@@ -62,7 +62,7 @@ scale = Vector2( 0.652145, 0.595453 )
 
 [node name="Player" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 41.5612, 92.8633 )
+position = Vector2( 151.617, 90.7124 )
 scale = Vector2( 0.434338, 0.476417 )
 
 [node name="Timer" type="Timer" parent="." index="4"]
