@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Apple.gd" type="Script" id=1]
 [ext_resource path="res://Graphisme/Apple.png" type="Texture" id=2]
@@ -7,17 +7,23 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 335.638, 30.5918 )
+extents = Vector2( 590.586, 30.5918 )
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 75
+resource_local_to_scene = true
+size = 25
 use_mipmaps = true
 use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[node name="Apple" type="StaticBody2D" index="0"]
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 22.1398, 20.8688 )
+
+[node name="Apple" type="StaticBody2D"]
 
 position = Vector2( -1.68391, -0.68397 )
 scale = Vector2( 0.288421, 0.288049 )
@@ -50,7 +56,7 @@ audio_bus_name = "Master"
 
 [node name="AreaShape" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 52.8572, -16.8674 )
+position = Vector2( 33.967, -41.9041 )
 scale = Vector2( -0.378254, 5.09226 )
 shape = SubResource( 1 )
 
@@ -60,10 +66,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 44.0
-margin_top = -164.0
-margin_right = 675.0
-margin_bottom = 141.0
+margin_top = -100.0
+margin_right = 282.0
+margin_bottom = -19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 focus_mode = 2
@@ -75,7 +80,7 @@ size_flags_stretch_ratio = 10.0
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "Hi !"
-visible_characters = 999
+visible_characters = -1
 percent_visible = 1.0
 meta_underlined = false
 tab_size = 1
@@ -92,6 +97,12 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+
+position = Vector2( 0.362926, -2.67898 )
+scale = Vector2( 1, 1.11224 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

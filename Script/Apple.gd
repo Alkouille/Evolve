@@ -22,6 +22,7 @@ func _on_Area2D_body_entered(body):
 			$Text.set_text("Hi,  i'm Cherry the Apple ! ")
 			$Text
 			$Timer.start()
+			$Timer.set_wait_time(1)
 
 
     
