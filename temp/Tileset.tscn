@@ -8,13 +8,16 @@ custom_solver_bias = 0.0
 a = Vector2( 0, 0 )
 b = Vector2( 0, 10 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="UpOpenLine" type="Sprite" parent="." index="0"]
 
 position = Vector2( 495, 305 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="UpOpenLine" type="StaticBody2D" parent="UpOpenLine" index="0"]
 
@@ -28,31 +31,19 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="1EdgeLeft" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UpOpenLine/UpOpenLine" index="0"]
 
-position = Vector2( -30.439, -32 )
-scale = Vector2( 1, 7.27273 )
-shape = SubResource( 1 )
-
-[node name="1EdgeRight" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="1"]
-
-position = Vector2( 28.878, -34.9091 )
-scale = Vector2( 1, 7.27273 )
-shape = SubResource( 1 )
-
-[node name="1EdgeDown" type="CollisionShape2D" parent="UpOpenLine/UpOpenLine" index="2"]
-
-position = Vector2( 27.5173, 30.1356 )
-rotation = 1.5708
-scale = Vector2( 1.6279, 5.67311 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+build_mode = 0
+polygon = PoolVector2Array( -32.0245, -31.339, -32.0245, 31.8196, 29.1508, 31.8196, 29.0315, -30.902, 25.5733, -30.902, 25.8118, 26.1375, -29.0432, 26.5746, -29.0432, -31.339 )
 
 [node name="LeftAndRightOpen" type="Sprite" parent="." index="1"]
 
-position = Vector2( 495, 305 )
+position = Vector2( 2998.5, 285.986 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="LeOpenLine" type="StaticBody2D" parent="LeftAndRightOpen" index="0"]
 
@@ -84,9 +75,12 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="DownOpenLine" type="Sprite" parent="." index="2"]
 
-position = Vector2( 495, 305 )
+position = Vector2( 1749.92, 1158.25 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="DownOpenLine" type="StaticBody2D" parent="DownOpenLine" index="0"]
 
@@ -122,9 +116,12 @@ shape = SubResource( 1 )
 
 [node name="RightOpenLine" type="Sprite" parent="." index="3"]
 
-position = Vector2( 495, 305 )
+position = Vector2( 520.352, 1166.96 )
 scale = Vector2( 16.4062, 9.21875 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="RightOpenLine" type="StaticBody2D" parent="RightOpenLine" index="0"]
 
